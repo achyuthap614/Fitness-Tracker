@@ -1,4 +1,4 @@
-from workout import workout_manager
+from workout import WorkoutManager
 from hash import HashTable
 class User:
     def __init__(self,userid,name,age,gender,height,weight,bmi,goal_weight):
@@ -10,7 +10,7 @@ class User:
         self.weight=weight
         self.bmi=bmi
         self.goal_weight=goal_weight
-        self.workout_manager=workout_manager()
+        self.workout_manager=WorkoutManager()
 class UserManager:
    
    def __init__(self):
@@ -27,8 +27,9 @@ class UserManager:
         return self.user_table.search(userid)
 
    def delete(self, userid):
-        return self.user_table.delete(userid)
+        return self.user_table.delete(username)
 
    def display_users(self):
         return self.user_table.display()
         
+   
